@@ -1,38 +1,60 @@
-\documentclass[letterpaper]{article}
+\documentclass{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[export]{adjustbox}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
 \usepackage{geometry}
-    \geometry{
-        left=1.5cm,
-        right=1.5cm,
-        top=0cm,
-        bottom=0cm
-    }
-%
-\graphicspath{ {./img} }
-\renewcommand{\familydefault}{qag}
-\definecolor{grey-1}{gray}{0.2}
-\definecolor{grey-2}{gray}{0.5}
-\setmainfont{[./Gantari-Italic-VariableFont_wght.ftt]}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tabularray}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.3pt]}]
 
-\title{
-    {\fontsize{18}{1}\selectfont \textbf{IGNACIO OLAVE}}\\
-    {\fontsize{14}{1}\selectfont\textcolor{grey-1}{
-        \begin{tabular}{l|l|l}
-            Computer Science & ignacio.olave@mfhnet.com & +56-9-8275-3590
-        \end{tabular}
-    }}\\
-    {\fontsize{12}{1}\selectfont\textcolor{grey-2}{
-        \begin{tabular}{l|l}
-            linkedin.com/in/olaveia & github.com/iolave
-        \end{tabular}
-    }}
+
+\geometry{
+    left=1.5cm,
+    right=1.5cm,
+    top=0cm,
+    bottom=2.5cm
 }
+\setlist[itemize]{leftmargin=*}
+\definecolor{gray-1}{gray}{0.1}
+\definecolor{gray-2}{gray}{0.2}
+\definecolor{gray-3}{gray}{0.3}
+\definecolor{gray-4}{gray}{0.4}
+\definecolor{gray-5}{gray}{0.5}
+\definecolor{gray-6}{gray}{0.6}
+
+% \usepackage{array}
+% \setlength{\parindent}{0pt}
+% \usepackage[utf8]{inputenc}
+% \usepackage{graphicx}
+% \usepackage[export]{adjustbox}
+
+%
+% \graphicspath{ {./img} }
+% \renewcommand{\familydefault}{qag}
+
+
+% ########################################################################### %
+% Title stuff
+% ########################################################################### %
 \author{\vspace{-5ex}}
 \date{\vspace{-5ex}}
+\title{
+    \LARGE IGNACIO OLAVE\\
+    \Large{
+        \textcolor{gray-5}{ \begin{tabular}{l|l|l}
+            Computer Science & ignacio.olave@mfhnet.com & +56-9-8275-3590
+        \end{tabular}}
+
+        \textcolor{gray-6}{ \begin{tabular}{l|l}
+                linkedin.com/in/olaveia & github.com/iolave
+        \end{tabular}}
+    }
+    \vspace{-8ex}
+}
+
 
 
 % DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -41,18 +63,141 @@
     % ########################################################################### %
     % Education
     % ########################################################################### %
-    \section*{Education}
-        \noindent\rule{\textwidth}{0.3pt}
+    \textcolor{gray-5}{\section*{Eduaction}}
 
-    \section*{Skills}
-        \noindent\rule{\textwidth}{0.3pt}
+        \begin{tblr}{@{} X[3,l] X[1,r]} 
+            \bfseries University of Santiago, Chile $\cdot$ Honor Bachelor of Computer Science & Mar 2015 - Dec 2021
+        \end{tblr}
+    
+        Courses: Data Structures, OOP in C++, Combinatorics, Distributed Algorithms and Systems.
 
-    \section*{Professional Experience}
-        \noindent\rule{\textwidth}{0.3pt}
 
-    \section*{Projects}
-        \noindent\rule{\textwidth}{0.3pt}
+    % ########################################################################### %
+    % Skills
+    % ########################################################################### %
+    \textcolor{gray-5}{\section*{Skills}}
+        \begin{tblr}{@{} X[0.5,l] X[3,l]}
+            Languages:      & Golang, Javascript, C++, Python, Java. \\
+            Technologies:   & Docker, Kubernetes, Sprint Boot, NodeJS, NextJS, ReactJS, MongoDB, Postresql, Oracle DB, Mysql, Cloudera, Apache Hadoop, Apache Hive, Git, Google Cloud Plataform, Bash.
+        \end{tblr}
 
-    \section*{Interests}
-        \noindent\rule{\textwidth}{0.3pt}
+    % ########################################################################### %
+    % Interests
+    % ########################################################################### %
+    \textcolor{gray-5}{\section*{Interests}}
+    Music production, recording and mastering $\cdot$ Playing instruments $\cdot$ Reading $\cdot$ Learning $\cdot$ Science $\cdot$ Homelab-ing.
+        
+    % ########################################################################### %
+    % Professional Experience
+    % ########################################################################### %
+    \textcolor{gray-5}{\section*{Professional Experience}}
+        % TECH LEAD @ INNOVA GROUP
+        \begin{tblr}{@{} X[3,l] X[1,r]}
+            \bfseries Tech Lead & Santiago, Chile \\
+            Innova Group SpA & May 2022 - Present \\
+            \textcolor{gray-6}{IT consulting company, mainly focused in software development} & \\\\
+        \end{tblr}
+
+        \begin{itemize}
+            \item Motor de Riesgo Integrado Online - Phase 1 @ Banco Falabella
+            \begin{itemize}
+                \item Managed Jira panel to track development tasks.
+                \item Wrote documentation in Confluence of the project developments.
+                \item Analysis of the required variables for the new risk engine that evaluates client data to determine wether it can or can not open a new credit card account.
+                \item Designed and managed the implementation of a process that groups and download data from Cloudera and GCP's datalake as csv files to a given sftp server.
+                \item Designed and managed the implementation and deployment of a NodeJS application that  orchestrate the ingest from a sftp server to a MongoDB given some file dependencies and aggregates the imported data to a determined format.
+                \item Designed and managed the implementation and deployment of a Golang api that retrieves the aggregated data from various MongoDB instances containing client's data.
+                
+            \end{itemize}
+        \end{itemize}
+
+        % SENIOR SOFTWARE ENGINEER @ INNOVA GROUP
+        \begin{tblr}{@{} X[3,l] X[1,r]}
+            \bfseries Senior Software Engineer & Santiago, Chile \\
+            Innova Group SpA & May 2021 - May 2022 \\
+            \textcolor{gray-6}{IT consulting company, mainly focused in software development} & \\
+        \end{tblr}
+       
+        \begin{itemize}
+            \item Aplazamiento Hipotecário @ Banco Falabella (Pandemic)
+            \begin{itemize}
+                \item Implemented an api using spring boot framework that allows to validate a client eligibility of postponing mortgage loan payments, enable the loan postponement and write, sign the required legal documents.
+                \item Usage of GitLab CI/CD to deploy the api to a kubernetes cluster.
+                \item Reused \textit{Nueva Informaión Bureau's} mongodb data import process. 
+            \end{itemize}  
+        \end{itemize}
+        \pagebreak 
+        \newgeometry{
+            left=1.5cm,
+            right=1.5cm,
+            top=2cm,
+            bottom=2.5cm
+        }
+
+        \begin{itemize}
+            \item Boletas Electrónicas @ Banco Falabella
+            \begin{itemize}
+                \item Implemented a microservice using spring boot framework that runs GCP Big Query given messages recieved in a Pub Sub subscription to populate a mysql database in GCP. 
+                \item Usage of GitLab CI/CD to deploy a microservice to a kubernetes cluster.
+                \item Gave QA support to a microservice that emmits Electronic Ballots given data in a mysql database.
+                \item Usage of a corporative framework to implement a process to ingest data from a oracle database to GCP's datalake.
+                \item Usage of a corporative framework to implement a process to group data over GCP's datalake.
+            \end{itemize}
+        \end{itemize}
+        
+        % PROFESSIONAL SOFTWARE ENGINEER @ INNOVA GROUP
+        \begin{tblr}{@{} X[3,l] X[1,r]}
+            \bfseries Professional Software Engineer & Santiago, Chile \\
+            Innova Group SpA & Sept 2020 - May 2021 \\
+            \textcolor{gray-6}{IT consulting company, mainly focused in software development} & \\
+        \end{tblr}
+
+        \begin{itemize}
+            \item Nueva Información Bureau @ Banco Falabella
+            \begin{itemize}
+                \item Data analysis to generate an efficent grouping data model over Cloudera.
+                \item Developed a process to import data from remote csv files with a custom json format to a MongoDB.
+                \item Implemented a hash to securerly store personal information that could also be decrypted with a rsa key.
+                \item Managed techincal aspects of the project.
+            \end{itemize}
+            \item Intern Training @ Innova Group
+        \end{itemize}
+
+        % JUNIOR SOFTWARE ENGINEER @ INNOVA GROUP
+        \begin{tblr}{@{} X[3,l] X[1,r]}
+            \bfseries Junior Software Engineer & Santiago, Chile \\
+            Innova Group SpA & Sept 2019 - Sept 2020 \\
+            \textcolor{gray-6}{IT consulting company, mainly focused in software development} & \\
+        \end{tblr}
+
+        \begin{itemize}
+            \item Cobranza Cruzada @ Banco Falabella
+            \begin{itemize}
+                \item Wrote a bash script loaded as a Control-M job at the beginning of the group to determine if it's safe to run the whole process that generates Cobranza Cruzada given some parametric values and assuring that data generated at the end of this process will be consistant.
+                \item Wrote scripts in HQL to group data as the project required it and the required oozie workflows.
+                \item Designed a Control-M workflow.
+                \item Built a process that generates reports from the data grouped through Cobranza Cruzada's execution.
+            \end{itemize}
+        \end{itemize}
+        
+        % SOFTWARE ENGINEERING INTERN @ INNOVA GROUP
+        \begin{tblr}{@{} X[3,l] X[1,r]}
+            \bfseries Software Engineering Intern & Santiago, Chile \\
+            Innova Group SpA & Jul 2019 - Sept 2019 \\
+            \textcolor{gray-6}{IT consulting company, mainly focused in software development} & \\
+        \end{tblr}
+
+        \begin{itemize}
+            \item Nuevos Contratos FE @ Banco Falabella
+            \begin{itemize}
+                \item Implemented autogenerated pdf's templates using Jaspersoft Studio to allow new credit card accounts to be opened through the different channels the bank have.
+                \item Implemented validation logic written in java for implemented fields inside the jasper templates.
+                \item Integration of Autentia as a main signer of e-documents and TOK as a contigency method inside jasper templates.
+            \end{itemize}
+        \end{itemize}
+
+    % ########################################################################### %
+    % Projects
+    % ########################################################################### %
+    % \section*{Projects}
 \end{document}
